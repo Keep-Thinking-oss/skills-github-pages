@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PISV Name="rootXml" Screensize="640*480" Event="BUTTON" DUALCPU="1" StartMode="WRILE" Language="CN">
+    <JDLMenu Name="Run Sta" Title="运行信息" Path="runstua" Icon="Menu_Runstatus.png" Time="short"
+        Node="0" Show="true">
+        <JDLMenu Name="Telemetry" Title="遥测信息" Icon="Defult.png" Time="short" Node="0" Show="true">
+            <JDLPage Name="Primary" Title="一次有效值" DLL="goosecheck" CMD="MEASUREMENT_NOO"
+                Icon="Defult.png" Time="short" Node="0" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="Secondary" Title="二次有效值" DLL="goosecheck" CMD="MEASUREMENT_NOO"
+                Icon="Defult.png" Time="short" Node="1" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="SyncInfo" Title="同期信息" DLL="goosecheck" CMD="MEASUREMENT_NOO"
+                Icon="Defult.png" Time="short" Node="2" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="DCInfo" Title="直流信息" DLL="goosecheck" CMD="MEASUREMENT_NOO"
+                Icon="Defult.png" Time="short" Node="3" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="GearInfo" Title="挡位信息" DLL="goosecheck" CMD="MEASUREMENT_NOO"
+                Icon="Defult.png" Time="short" Node="4" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="TickMonitor" Title="时钟监视信息" DLL="goosecheck" CMD="MEASUREMENT_NOO"
+                Icon="Defult.png"
+                Time="short" Node="5" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+        </JDLMenu>
+        <JDLMenu Name="Telesignal" Title="遥信信息" Icon="Defult.png" Time="short" Node="1" Show="true">
+            <JDLPage Name="Double" Title="双点信息" DLL="goosecheck" CMD="Telesignal_NOO,"
+                Icon="Defult.png" Time="short" Node="0" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="Single" Title="单点信息" DLL="goosecheck" CMD="Telesignal_NOO"
+                Icon="Defult.png" Time="short" Node="1" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="Dev In" Title="硬开入状态" DLL="goosecheck" CMD="Telesignal_NOO"
+                Icon="Defult.png" Time="short" Node="2" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="Locked sta" Title="联闭锁状态" DLL="goosecheck" CMD="Telesignal_NOO"
+                Icon="Defult.png" Time="short" Node="3" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="Strip Sta" Title="软压板状态" DLL="goosecheck" CMD="RUNSTATUS_SFC"
+                Icon="Defult.png" Time="short" Node="4" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+        </JDLMenu>
+        <JDLMenu Name="StatusInfo" Title="状态信息" Icon="Defult.png" Time="short" Node="2" Show="true">
+            <JDLPage Name="Run Sta" Title="运行状态" DLL="goosecheck" CMD="Status_NOO" Icon="Defult.png"
+                Time="short" Node="0" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="Com Sta" Title="通信状态" DLL="goosecheck" CMD="Status_NOO" Icon="Defult.png"
+                Time="short" Node="1" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="Warn Sta" Title="告警状态" DLL="goosecheck" CMD="Status_NOO"
+                Icon="Defult.png" Time="short" Node="2" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+        </JDLMenu>
+        <JDLMenu Name="Recodes" Title="记录查询" Icon="Defult.png" Time="short" Node="3" Show="true">
+            <JDLPage Name="Warnings" Title="告警记录" DLL="goosecheck" CMD="REPORTMNG_WARN"
+                Icon="Defult.png" Time="short" Node="0" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="Actions" Title="操作记录" DLL="goosecheck" CMD="REPORTMNG_OPEC"
+                Icon="Defult.png" Time="short" Node="1" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="SOE" Title="SOE记录" DLL="goosecheck" CMD="REPORTMNG_ALS" Icon="Defult.png"
+                Time="short" Node="2" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+        </JDLMenu>
+        <JDLMenu Name="DeviceInfo" Title="装置信息" Icon="Defult.png" Time="short" Node="4" Show="true">
+            <JDLPage Name="UID" Title="唯一性编码" DLL="local" CMD="DevInfo_NOO" Icon="Defult.png"
+                Time="short" Node="0" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="Version" Title="程序版本" DLL="local" CMD="VERSION_NOO" Icon="Defult.png"
+                Time="short" Node="1" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+        </JDLMenu>
+    </JDLMenu>
+    <JDLMenu Name="User Set" Title="用户设置" Path="Report" Icon="Menu_Report.png" Time="short" Node="1"
+        Show="true">
+        <JDLPage Name="Mea Para" Title="遥测参数" DLL="csabase" CMD="UseSet_NOO" Icon="Defult.png"
+            Time="short" Node="0" Show="true" Token="1">
+            <JDLGroup Item="NULL" />
+        </JDLPage>
+        <JDLPage Name="Tele Para" Title="遥信参数" DLL="csabase" CMD="UseSet_NOO" Icon="Defult.png"
+            Time="short" Node="1" Show="true" Token="1">
+            <JDLGroup Item="NULL" />
+        </JDLPage>
+        <JDLPage Name="Rem Para" Title="遥控参数" DLL="csabase" CMD="UseSet_NOO" Icon="Defult.png"
+            Time="short" Node="2" Show="true" Token="1">
+            <JDLGroup Item="NULL" />
+        </JDLPage>
+        <JDLPage Name="Syn Para" Title="同期参数" DLL="csabase" CMD="UseSet_NOO" Icon="Defult.png"
+            Time="short" Node="3" Show="true" Token="1">
+            <JDLGroup Item="NULL" />
+        </JDLPage>
+        <JDLPage Name="Strip Set" Title="压板设置" DLL="csabase" CMD="RUNCFG_MODISFC" Icon="Defult.png"
+            Time="short" Node="4" Show="true" Token="1">
+            <JDLGroup Item="NULL" />
+        </JDLPage>
+        <JDLMenu Name="Def Set" Title="密码管理" Icon="Defult.png" Time="short" Node="5">
+            <JDLPage Name="Passwd Set" Title="密码修改" DLL="local" CMD="DEFAULT_MODIPWD"
+                Icon="Defult.png" Time="long" Node="0" Show="true" Token="2">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="BackupParameter" Title="接线图" DLL="AzureDragon"
+                CMD="Diarganm"
+                Icon="Defult.png" Time="short" Node="1" Show="true" Token="1">
+                <JDLGroup Item="NULL"></JDLGroup>
+            </JDLPage>
+        </JDLMenu>
+    </JDLMenu>
+    <JDLMenu Name="Fact Set" Title="厂家设置" Path="Paint" Icon="Menu_RunSet.png" Time="short" Node="2"
+        Show="true">
+        <JDLPage Name="TimeSet" Title="时间设置" DLL="local" CMD="DEFAULT_MODITIME" Icon="Defult.png"
+            Time="long" Node="0" Show="true" Token="1">
+            <JDLGroup Item="NULL" />
+        </JDLPage>
+        <JDLPage Name="CommuSet" Title="通信设置" DLL="csabase" CMD="DEVCFG_COM" Icon="Defult.png"
+            Time="short" Node="1" Show="true" Token="1">
+            <JDLGroup Item="COMFunction" DLL="csabase" />
+        </JDLPage>
+        <JDLPage Name="InnerSet" Title="内部设置" DLL="csabase" CMD="DEVCFG_HMISETTINGS"
+            Icon="Defult.png" Time="short" Node="2" Show="true" Token="1">
+            <JDLGroup Item="NULL" />
+        </JDLPage>
+    </JDLMenu>
+    <JDLMenu Name="Other" Title="其它信息" Path="RunSet" Icon="Menu_Factory.png" Time="short" Node="3"
+        Show="true">
+        <JDLMenu Name="DevTest" Title="测试功能" Path="Test" Icon="Menu_Test.png" Time="short" Node="0"
+            Show="true">
+            <JDLPage Name="LedTest" Title="灯光测试" DLL="csabase" CMD="TEST_LED" Icon="Defult.png"
+                Time="long" Node="0" Show="true" Token="1">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="DOTest" Title="开出测试" DLL="csabase" CMD="TEST_DO" Icon="Defult.png"
+                Time="long" Node="1" Show="true" Token="1">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLMenu Name="SCATest" Title="远动测试" Icon="Defult.png" Time="short" Node="2" Show="true">
+                <JDLPage Name="Action" Title="动作事件" DLL="csabase" CMD="TEST_ACTION"
+                    Icon="Defult.png" Time="long" Node="0" Show="true" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Warning" Title="告警事件" DLL="csabase" CMD="TEST_ALARM"
+                    Icon="Defult.png" Time="long" Node="1" Show="true" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="DOI" Title="开入对点" DLL="csabase" CMD="TEST_DI" Icon="Defult.png"
+                    Time="long" Node="2" Show="true" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="DOT" Title="遥测对点" DLL="csabase" CMD="TEST_CURVE" Icon="Defult.png"
+                    Time="long" Node="3" Show="true" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="DOTest" Title="遥测曲线" DLL="csabase" CMD="TEST_CURVE" Icon="Defult.png"
+                    Time="long" Node="4" Show="true" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+            </JDLMenu>
+            <JDLPage Name="REMOTest" Title="遥控测试" DLL="csabase" CMD="TEST_REMOTE" Icon="Defult.png"
+                Time="long" Node="3" Show="true" Token="1">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="FigTest" Title="接线图" DLL="AzureDragon" CMD="PAGE_TEST" Icon="Defult.png"
+                Time="short" Node="4" Show="true" Token="1">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+        </JDLMenu>
+        <JDLMenu Name="DevLOG" Title="日志信息" Icon="Defult.png" Time="short" Node="1" Show="true">
+            <JDLPage Name="RunningLog" Title="运行日志" DLL="goosecheck" CMD="REPORTMNG_LOG"
+                Icon="Defult.png" Time="short" Node="0" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+            <JDLPage Name="HistoryLog" Title="历史日志" DLL="goosecheck" CMD="REPORTMNG_HISLOG"
+                Icon="Defult.png" Time="short" Node="1" Show="true" Token="0">
+                <JDLGroup Item="NULL" />
+            </JDLPage>
+        </JDLMenu>
+        <JDLMenu Name="Other" Title="其它" Icon="Defult.png" Time="long" Node="2" Show="true">
+            <JDLMenu Name="Run Sta" Title="运行工况" Path="runstua" Icon="Menu_Runstatus.png"
+                Time="short" Node="0">
+                <JDLPage Name="Prot Value" Title="保护值" DLL="goosecheck" CMD="PROTECT_VAL"
+                    Icon="Defult.png" Time="short" Show="true" Node="0" Token="0">
+                    <JDLGroup Item="GRP_PROYC" />
+                </JDLPage>
+                <JDLPage Name="Sam Value" Title="采样值" DLL="goosecheck" CMD="MEASUREMENT_VAL"
+                    Icon="Defult.png" Show="false" Time="short" Node="0" Token="0">
+                    <JDLGroup Item="GRP_YC" />
+                </JDLPage>
+                <JDLPage Name="Mea Value" Title="测量值" DLL="goosecheck" CMD="MEASUREMENT_VAL"
+                    Icon="Defult.png" Time="short" Show="true" Node="1" Token="0">
+                    <JDLGroup Item="GRP_YC" />
+                </JDLPage>
+                <JDLPage Name="Ele Value" Title="电度值" DLL="goosecheck" CMD="ELECTRIC_VAL"
+                    Icon="Defult.png" Time="short" Show="true" Node="2" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Bre Info" Title="断路器" DLL="goosecheck" CMD="ELECTRIC_VAL"
+                    Icon="Defult.png" Time="short" Show="false" Node="2" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Open/Close" Title="分合闸" DLL="goosecheck" CMD="ELECTRIC_VAL"
+                    Icon="Defult.png" Time="short" Show="false" Node="2" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Telesign" Title="遥信状态" DLL="goosecheck" CMD="TELESIGN_STATUS"
+                    Icon="Defult.png" Time="short" Show="true" Node="3" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Strip Sta" Title="压板状态" DLL="goosecheck" CMD="RUNSTATUS_SFC"
+                    Icon="Defult.png" Time="short" Show="true" Node="4" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Run Code" Title="运行区号" DLL="goosecheck" CMD="RUNNING_CODE"
+                    Icon="Defult.png" Time="short" Show="true" Node="5" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="SetDisplay" Title="定值显示" DLL="goosecheck" CMD="EDITVAL_SHWON"
+                    Icon="Defult.png" Time="short" Show="true" Node="6" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="GOOSE" Title="GOOSE值" DLL="goosecheck" CMD="GOOSE_SHWON"
+                    Icon="Defult.png" Time="short" Show="true" Node="7" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="OMS" Title="OMS工况" DLL="psbase" CMD="OMS_SHWON" Icon="Defult.png"
+                    Time="short" Show="false" Node="8" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+            </JDLMenu>
+            <JDLMenu Name="Rep Mana" Title="报告管理" Path="Report" Icon="Menu_Report.png" Time="short"
+                Node="1">
+                <JDLPage Name="SOE" Title="顺序事件" DLL="goosecheck" CMD="REPORTMNG_ALL"
+                    Icon="Defult.png" Time="short" Node="0" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Actions" Title="动作报告" DLL="goosecheck" CMD="REPORTMNG_DIST_REPORT"
+                    Icon="Defult.png" Time="short" Node="1" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLMenu Name="Faults" Title="故障录波" Icon="Defult.png" Time="short" Node="2">
+                    <JDLPage Name="Amp" Title="幅值录波" DLL="goosecheck" CMD="REPORTMNG_DIST_AM,"
+                        Icon="Defult.png" Time="short" Node="0" Token="0">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Samp" Title="采样录波" DLL="goosecheck" CMD="REPORTMNG_DIST_SM"
+                        Icon="Defult.png" Time="short" Node="1" Token="0">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Start" Title="启动录波" DLL="csabase" CMD="" Icon="Defult.png"
+                        Time="short" Node="2" Token="0">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Wave" Title="启动波形" DLL="csabase" CMD="" Icon="Defult.png"
+                        Time="short" Node="3" Token="0">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                </JDLMenu>
+                <JDLPage Name="Operation" Title="操作事件" DLL="goosecheck" CMD="REPORTMNG_OPER"
+                    Icon="Defult.png" Time="short" Node="3" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Logs(Cur)" Title="运行日志" DLL="goosecheck" CMD="REPORTMNG_LOG"
+                    Icon="Defult.png" Time="short" Node="4" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Logs(Old)" Title="历史日志" DLL="goosecheck" CMD="REPORTMNG_HISLOG"
+                    Icon="Defult.png" Time="short" Node="5" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLMenu Name="Delete" Title="记录清除" Icon="Defult.png" Time="short" Node="6">
+                    <JDLPage Name="DeleteEvent" Title="事件删除" DLL="csabase" CMD="REPORTMNG_DELEVENT,"
+                        Icon="Defult.png" Time="short" Node="0" Token="0">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="DeleteRecordWave" Title="录波删除" DLL="csabase"
+                        CMD="REPORTMNG_DELDIST" Icon="Defult.png" Time="short" Node="1" Token="0">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="StartDelete" Title="启动删除" DLL="csabase" CMD="" Icon="Defult.png"
+                        Time="short" Node="2" Token="0">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                </JDLMenu>
+            </JDLMenu>
+            <JDLMenu Name="Print" Title="打印管理" Path="Paint" Icon="Menu_Print.png" Time="short"
+                Node="2">
+                <JDLPage Name="Settings" Title="定值打印" DLL="AzureDargon" CMD="PRINTMNG_SETTINGS"
+                    Icon="Defult.png" Time="short" Node="0" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Strips" Title="压板打印" DLL="AzureDargon" CMD="PRINTMNG_SFC"
+                    Icon="Defult.png" Time="short" Node="1" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Reports" Title="报告打印" DLL="AzureDargon" CMD="PRINTMNG_REPORT"
+                    Icon="Defult.png" Time="short" Node="2" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+            </JDLMenu>
+            <JDLMenu Name="Run Set" Title="运行设置" Path="RunSet" Icon="Menu_RunSet.png" Time="short"
+                Node="3">
+                <JDLPage Name="CodeSet" Title="区号设置" DLL="csabase" CMD="RUNCFG_SWITCHAREA"
+                    Icon="Defult.png" Time="long" Node="0" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="ConstSet" Title="定值整定" DLL="csabase" CMD="RUNCFG_MODISETTINGS"
+                    Icon="Defult.png" Time="long" Node="1" Token="1">
+                    <JDLGroup Item="GRP_DZ" />
+                </JDLPage>
+                <JDLPage Name="SwitchSet" Title="控制字投退" DLL="csabase" CMD="RUNCFG_MODICTRLWORD"
+                    Icon="Defult.png" Time="long" Node="2" Token="1">
+                    <JDLGroup Item="GRP_DZW" DLL="csabase" />
+                </JDLPage>
+                <JDLPage Name="ConstCopy" Title="定值复制" DLL="csabase" CMD="RUNCFG_COPYSETTINGS"
+                    Icon="Defult.png" Time="short" Node="3" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="RelaySwitch" Title="压板投退" DLL="csabase" CMD="RUNCFG_SFCALL"
+                    Icon="Defult.png" Time="long" Node="4" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLMenu Name="TripMat" Title="跳闸矩阵" Icon="Defult.png" Time="short" Node="5" Token="1">
+                    <JDLPage Name="OutOrigin" Title="出口原件" DLL="csabase" CMD="RUNCFG_MODIUNITOUT"
+                        Icon="Defult.png" Time="long" Node="0">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="OutProperty" Title="出口属性" DLL="csabase" CMD="RUNCFG_MODIOUTTYPE"
+                        Icon="Defult.png" Time="long" Node="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                </JDLMenu>
+            </JDLMenu>
+            <JDLMenu Name="Dev Set" Title="装置设置" Path="DevSet" Icon="Menu_DevSet.png" Time="short"
+                Node="4" >
+                <JDLMenu Name="InterSet" Title="界面设置" Icon="Defult.png" Time="short" Node="0">
+                    <JDLPage Name="Interface" Title="界面参数" DLL="csabase" CMD="DEVCFG_HMISETTINGS"
+                        Icon="Defult.png" Time="short" Node="0" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="HMISet" Title="人机界面" DLL="local" CMD="DEVCFG_HMISETTINGS"
+                        Icon="Defult.png" Time="short" Node="1" Show="true" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                </JDLMenu>
+                <JDLPage Name="ComSet" Title="通信设置" DLL="csabase" CMD="DEVCFG_COM" Icon="Defult.png"
+                    Time="long" Node="1" Token="1">
+                    <JDLGroup Item="COMFunction" DLL="csabase" />
+                </JDLPage>
+                <JDLPage Name="DevicePa" Title="装置参数" DLL="csabase" CMD="DEVCFG_DEVPARA"
+                    Icon="Defult.png" Time="short" Node="2" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+            </JDLMenu>
+            <JDLMenu Name="Dev Test" Title="装置测试" Path="Test" Icon="Menu_Test.png" Time="short"
+                Node="5" Token="1">
+                <JDLPage Name="LedTest" Title="灯光测试" DLL="csabase" CMD="TEST_LED" Icon="Defult.png"
+                    Time="long" Node="0" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="DOTest" Title="开出测试" DLL="csabase" CMD="TEST_DO" Icon="Defult.png"
+                    Time="long" Node="1" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLMenu Name="REMOTest" Title="远动测试" Icon="Defult.png" Time="short" Node="2">
+                    <JDLPage Name="Act Evt" Title="动作事件" DLL="csabase" CMD="TEST_ACTION"
+                        Icon="Defult.png" Time="long" Node="0" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Alm Evt" Title="告警事件" DLL="csabase" CMD="TEST_ALARM"
+                        Icon="Defult.png" Time="long" Node="1" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="DI" Title="开入对点" DLL="csabase" CMD="TEST_DI" Icon="Defult.png"
+                        Time="long" Node="2" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Tele point" Title="遥测对点" DLL="csabase" CMD="TEST_CURVE"
+                        Icon="Defult.png" Time="long" Node="3" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                </JDLMenu>
+            </JDLMenu>
+            <JDLMenu Name="Fact Set" Title="出厂设置" Path="Factory" Icon="Menu_Factory.png"
+                Time="short" Node="6">
+                <JDLPage Name="TimeSet" Title="时间设置" DLL="local" CMD="DEFAULT_SETTIME"
+                    Icon="Defult.png" Time="long" Node="0" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Passwd Set" Title="密码修改" DLL="local" CMD="DEFAULT_MODIPWD"
+                    Icon="Defult.png" Time="long" Node="1" Token="2">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLMenu Name="Def Set" Title="缺省设置" Icon="Defult.png" Time="short" Node="2">
+                    <JDLPage Name="Run Para" Title="运行参数" DLL="csabase"
+                        CMD="DEFAULT_AREA_DEFAULTCFG" Icon="Defult.png" Time="short" Node="0" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Chan Coef" Title="通道系数" DLL="csabase"
+                        CMD="DEFAULT_CHAN_DEFAULTCFG" Icon="Defult.png" Time="short" Node="1" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Orig Out" Title="元件出口" DLL="csabase"
+                        CMD="DEFAULT_UNITOUT_DEFAULTCFG" Icon="Defult.png" Time="short" Node="2" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Out Pro" Title="出口属性" DLL="csabase"
+                        CMD="DEFAULT_OUTTYPE_DEFAULTCFG" Icon="Defult.png" Time="short" Node="3" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="DIName" Title="开入名称" DLL="csabase"
+                        CMD="DEFAULT_DINAME_DEFAULTCFG" Icon="Defult.png" Time="short" Node="4" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Com Para" Title="通讯参数" DLL="csabase"
+                        CMD="DEFAULT_COMM_DEFAULTCFG" Icon="Defult.png" Time="short" Node="5" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Backup" Title="备份参数" DLL="csabase"
+                        CMD="DEFAULT_RESUME_DEFAULTCFG" Icon="Defult.png" Time="short" Node="6" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                </JDLMenu>
+                <JDLPage Name="Chan Cal" Title="通道校准" DLL="csabase" CMD="DEFAULT_CHANADJUST"
+                    Icon="Defult.png" Time="long" Node="3" Token="1">
+                    <JDLGroup Item="GRP_CHAN" DLL="csabase" />
+                </JDLPage>
+                <JDLPage Name="Ele cal" Title="电度置数" DLL="csabase" CMD="DEFAULT_PULSEMODI"
+                    Icon="Defult.png" Time="long" Node="4" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLPage Name="Clear Ele" Title="电度清零" DLL="csabase" CMD="DEFAULT_PULSEZEOR"
+                    Icon="Defult.png" Time="short" Node="5" Token="1">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+                <JDLMenu Name="SoftUpdate" Title="程序升级" Icon="Defult.png" Time="short" Node="6" >
+                    <JDLPage Name="Protect" Title="保护升级" DLL="csabase" CMD="DEFAULT_ProUPGRADE"
+                        Icon="Defult.png" Time="short" Node="0" Token="2">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Interface" Title="界面升级" DLL="csabase" CMD="DEFAULT_HMIUPGRADE"
+                        Icon="Defult.png" Time="short" Node="1" Token="2">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                </JDLMenu>
+                <JDLMenu Name="Export" Title="数据导出" Icon="Defult.png" Time="short" Node="7" >
+                    <JDLPage Name="Record" Title="导出录波" DLL="csabase" CMD="DEFAULT_EXPORTDIST"
+                        Icon="Defult.png" Time="short" Node="0" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Software" Title="导出程序" DLL="csabase" CMD="DEFAULT_EXPORTPROGRAM"
+                        Icon="Defult.png" Time="short" Node="1" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Configure" Title="导出配置" DLL="csabase" CMD="DEFAULT_EXPORTZIKU"
+                        Icon="Defult.png" Time="short" Node="2" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Parameter" Title="导出参数" DLL="csabase" CMD="DEFAULT_EXPORTPARA"
+                        Icon="Defult.png" Time="short" Node="3" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                </JDLMenu>
+                <JDLMenu Name="OtherInfo" Title="其他信息" Icon="Defult.png" Time="short" Node="8">
+                    <JDLPage Name="SubBoard" Title="子板固化" DLL="csabase" CMD="SUBBOARD_DEFAULT"
+                        Icon="Defult.png" Time="short" Node="0" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="CPU Para" Title="CPU参数" DLL="csabase"
+                        CMD="DEFAULT_TERMCMD_CPUINFO" Icon="Defult.png" Time="short" Node="1" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Optic Mod" Title="光模块参数" DLL="csabase"
+                        CMD="DEFAULT_TERMCMD_FDDIINFO" Icon="Defult.png" Time="short" Node="2" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="CPU Frame" Title="CPU帧信息" DLL="csabase"
+                        CMD="DEFAULT_TERMCMD_FRMINFO" Icon="Defult.png" Time="short" Node="3" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Manful" Title="手动录波" DLL="csabase" CMD="DEFAULT_TERMCMD_FAULTREC"
+                        Icon="Defult.png" Time="short" Node="4" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="CPU Timer" Title="CPU时钟器" DLL="csabase"
+                        CMD="DEFAULT_TERMCMD_SYSTIMER" Icon="Defult.png" Time="short" Node="5" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Flash" Title="FLASH监视" DLL="csabase"
+                        CMD="DEFAULT_TERMCMD_SYSFLASH" Icon="Defult.png" Time="short" Node="6" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Login" Title="远程登录允许" DLL="csabase"
+                        CMD="DEFAULT_TERMCMD_REMOTETELNET" Icon="Defult.png" Time="short" Node="7" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                    <JDLPage Name="Terminal" Title="超级终端" DLL="csabase"
+                        CMD="DEFAULT_TERMCMD_TERMINAL" Icon="Defult.png" Time="short" Node="8" Token="1">
+                        <JDLGroup Item="NULL" />
+                    </JDLPage>
+                </JDLMenu>
+                <JDLPage Name="VerInfo" Title="关于本机" DLL="local" CMD="VERSION_NEW" Icon="Defult.png"
+                    Time="short" Node="9" Token="0">
+                    <JDLGroup Item="NULL" />
+                </JDLPage>
+            </JDLMenu>
+        </JDLMenu>
+        <JDLPage Name="MenuTest" Title="页面测试" DLL="AzureDargon" CMD="PAGE_TEST" Icon="Defult.png"
+            Time="short" Node="3" Show="true" Token="1">
+            <JDLGroup Item="NULL" />
+        </JDLPage>
+    </JDLMenu>
+</PISV>
